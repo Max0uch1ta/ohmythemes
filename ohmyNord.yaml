@@ -29,7 +29,7 @@ blocks:
       - type: python
         style: plain
         foreground: p:nord-8 # Keeps your light blue color
-        template: "{{ if .Error }}{{ .Error }}{{ else }} \ue73c {{ if .Venv }}{{ .Venv }} | {{ end }}{{ .Full }}{{ end }}"
+        template: "{{ if .Error }}{{ .Error }}{{ else if .Venv }} \ue73c {{ .Venv }}{{ end }}"
         properties:
           fetch_virtual_env: true
       #- type: executiontime
